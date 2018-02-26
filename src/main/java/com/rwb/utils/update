@@ -1,0 +1,14 @@
+RwbProject（SpringBoot Mybatis） 2018/1/25 版本1.0.1 访问接口地址 http://***/Rwb/getDoc
+版本内容 能够获取得到所有的接口数据
+
+RwbProject（SpringBoot Mybatis） 2018/1/26 版本1.0.2 访问接口地址 http://***/Rwb/getDoc
+版本内容
+增加给app开发提供了更详细的文档
+
+RwbProject（SpringBoot Mybatis） 2018/1/29 版本1.0.3 访问接口地址 http://***/Rwb/getDoc
+版本内容
+修改了添加设备的错误BUG
+
+RwbProject（SpringBoot Mybatis） 2018/1/30 版本1.0.4 访问接口地址 http://***/Rwb/getDoc
+版本内容
+修改了更新和删除设备的接口错误BUG

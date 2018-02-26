@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>接口获取</title>
+
+    <link th:href="@{bootstrap/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{bootstrap/css/bootstrap-theme.css}" rel="stylesheet" />
+
+</head>
+<body>
+    <div style="color: #2b669a;font-size: 36px">
+        &nbsp;&nbsp;接口调试 Get 请求方式 Demo<br/>
+        &nbsp;&nbsp;http://xxx/Rwb/getData?action=getUser username=yuan password=123456
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="panel-title">User - Support Get/Post</h2>
+        </div>
+        <div class="panel-body">
+            <h3>getData/getUser</h3>
+            此接口用于获取用户的登录信息<br/>
+            action = getUser<br/>
+            username = yuan<br/>
+            password = 123456<br/><br/>
+
+            接口参数<br/>
+            username 用户名<br/>
+            password 用户密码<br/>
+
+        </div>
+
+        <div class="panel-body">
+            <h3>getData/addUser</h3>
+            此接口用于注册用户<br/>
+            action = addUser<br/>
+            username = demo<br/>
+            password = 123456<br/><br/>
+
+            接口参数<br/>
+            username 用户名<br/>
+            password 用户密码<br/>
+
+
+        </div>
+
+        <div class="panel-body">
+            <h3>getData/updateUser</h3>
+            更新用户的注册信息<br/>
+            action = updateUser<br/>
+            userid = 12<br/>
+            username = yuan<br/>
+            password = 123456<br/>
+            age = 18<br/>
+            sex = 男<br/>
+            phone = 1888888888<br/>
+            email = 110112@163.com<br/>
+            hoby = 无<br/>
+            note = 无<br/><br/>
+
+            接口参数<br/>
+            userid 用户的id<br/>
+            username 用户名<br/>
+            password 密码<br/>
+            age 年龄<br/>
+            sex 性别<br/>
+            phone 电话<br/>
+            email 邮箱<br/>
+            hoby 兴趣爱好<br/>
+            note 备注<br/>
+
+        </div>
+
+        <div class="panel-body">
+            <h3>getData/deleteUser</h3><br/>
+            删除注册的用户 注意：此接口不对外公布<br/>
+            action = deleteUser<br/>
+            username = demo<br/>
+            password = 123456<br/><br/>
+
+            接口参数<br/>
+            username 用户名<br/>
+            password 密码<br/>
+
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="panel-title">Device - Support Get/Post</h2>
+        </div>
+        <div class="panel-body">
+            <h3>getData/getAllDevice</h3><br/>
+            获取当前用户所有设备信息<br/>
+            action = getAllDevice<br/>
+            userid = 12<br/>
+            username = yuan<br/><br/>
+
+            接口参数<br/>
+            userid 用户id<br/>
+            username 用户名<br/>
+        </div>
+
+        <div class="panel-body">
+            <h3>getData/addDevice</h3><br/>
+            添加设备获取注册设备 必须要注册设备之后才能使得设备获取到信息<br/>
+            action = addDevice<br/>
+            userid = 12<br/>
+            username = yuan<br/>
+            devicename = demo<br/>
+            deviceaddre = 00:00:00:00<br/>
+            添加设备的时间是由app/其它端上传上来 传入是Long型的参数
+            addtime = 152355660000<br/><br/>
+
+            接口参数<br/>
+            userid 用户id<br/>
+            username 用户名<br/>
+            devicename 设备名 (从设备上得到)<br/>
+            deviceaddre 设备地址 (从设备上得到)<br/>
+            addtime app传入给服务器Long型时间戳参数<br/>
+        </div>
+
+        <div class="panel-body">
+            <h3>getData/updatDevice</h3><br/>
+            更新设备的注册信息<br/>
+            action = updateDevice<br/>
+            deviceid = 10002<br/>
+            userid = 1001<br/>
+            username = demo<br/>
+            devicename = demo<br/>
+            deviceaddre = 00:00:00:00<br/>
+            addtime = 152355660000<br/><br/>
+
+            接口参数<br/>
+            deviceid 设备id<br/>
+            userid 用户id<br/>
+            username 用户名<br/>
+            devicename 设备名 (从设备上得到)<br/>
+            deviceaddre 设备地址 (从设备上得到)<br/>
+            addtime app传入给服务器Long型时间戳参数<br/>
+
+        </div>
+
+        <div class="panel-body">
+            <h3>getData/deleteDevice</h3><br/>
+            删除注册设备<br/>
+            action = deleteDevice<br/>
+            deviceid = 10002<br/>
+            userid = 1001<br/>
+            username = demo<br/><br/>
+
+            接口参数<br/>
+            deviceid 设备id<br/>
+            userid 用户id<br/>
+            username 用户名<br/>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="panel-title">Data - Support Get/Post</h2>
+        </div>
+        <div class="panel-body">
+            <h3>getData/getCurrent</h3>
+            获取当前的温度/湿度信息<br/>
+            action = getCurrent<br/>
+            dataaddre = 00:00:00:00<br/><br/>
+
+            接口参数<br/>
+            dataaddre 设备的地址<br/>
+
+
+        </div>
+
+        <div class="panel-body">
+            <h3>getData/deleteData</h3>
+            删除当前的温度/湿度信息
+            action = deleteData<br/>
+            dataaddre = 00:00:00:00<br/><br/>
+
+            接口参数<br/>
+            dataaddre 设备的地址<br/>
+
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="panel-title">Probe - Support Get/Post</h2>
+        </div>
+        <div class="panel-body">
+            <h3>getData/getProbe</h3>
+            获取设备探头数据<br/>
+            action = getProbe<br/>
+            deviceid = 1<br/>
+            probename=one<br/>
+            begintime = 1516528220580<br/>
+            endtime = 1516756515102<br/><br/>
+
+            接口参数<br/>
+            deviceid 设备的id<br/>
+            probename 探头的名称<br/>
+            begintime 开始时间 app传入给服务器Long型时间戳参数<br/>
+            endtime 结束时间 app传入给服务器Long型时间戳参数<br/>
+
+
+
+        </div>
+
+        <div class="panel-body">
+            <h3>getData/deleteProbe</h3>
+            action = deleteProbe<br/>
+            删除设备探头数据<br/>
+            deviceid = 1<br/>
+            probename=one<br/>
+            begintime = 1516528220580<br/>
+            endtime = 1516756515102<br/><br/>
+
+            接口参数<br/>
+            deviceid 设备的id<br/>
+            probename 探头的名称<br/>
+            begintime 开始时间 app传入给服务器Long型时间戳参数<br/>
+            endtime 结束时间 app传入给服务器Long型时间戳参数<br/>
+
+        </div>
+    </div>
+
+</body>
+</html>
